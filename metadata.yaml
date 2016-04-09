@@ -1,0 +1,51 @@
+_repo: The-Last-of-the-Mohicans-A-Narrative-of-1757_27681
+_version: 0.0.1
+contributor:
+  illustrator:
+    agent_name: Wyeth, N. C. (Newell Convers)
+    aliases:
+    - Wyeth, Newell Convers
+    - Wyeth, N.C.
+    birthdate: 1882
+    deathdate: 1945
+    gutenberg_agent_id: '32841'
+    url: http://www.gutenberg.org/2009/agents/32841
+    wikipedia: http://en.wikipedia.org/wiki/N._C._Wyeth
+creator:
+  author:
+    agent_name: Cooper, James Fenimore
+    aliases:
+    - Morgan, Jane
+    - Cooper, J. Fenimore (James Fenimore)
+    - Cooper, Fenimore
+    birthdate: 1789
+    deathdate: 1851
+    gutenberg_agent_id: '483'
+    url: http://www.gutenberg.org/2009/agents/483
+    wikipedia: http://en.wikipedia.org/wiki/James_Fenimore_Cooper
+description: In 1757, the third year of the French and Indian War, Hawkeye, a colonial
+  scout, and his friends, Chingachkook, a chief of the Mohicans, and his son Uncas
+  risk their lives to guide two English sisters through hostile territory and evade
+  the evil Huron, Magua, who is determined to destroy them.  Find out what happens
+  next. Beautifully illustrated, this classic comic graphic novel captures the imagination
+  of readers of all ages and inspires a love of literature and reading.
+gutenberg_issued: '2009-01-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '27681'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Historical fiction'
+- !lcsh 'Mohegan Indians -- Fiction'
+- !lcsh 'Adventure stories'
+- !lcc 'PS'
+- !lcsh 'Bumppo, Natty (Fictitious character) -- Fiction'
+- !lcsh 'United States -- History -- French and Indian War, 1754-1763 -- Fiction'
+- !lcsh 'War stories'
+- !lcsh 'Frontier and pioneer life -- Fiction'
+- GITenberg
+title: 'The Last of the Mohicans: A Narrative of 1757'
+url: http://www.gutenberg.org/ebooks/27681
