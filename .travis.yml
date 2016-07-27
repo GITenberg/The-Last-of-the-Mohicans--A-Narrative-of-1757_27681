@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+before_install:
+- gem install asciidoctor -v 1.5.2
+- gem install tilt
+- sudo pip install git+https://github.com/gitenberg-dev/gitberg
+- sudo pip install pillow
+- sudo pip install cssutils
+- sudo pip install docutils
+- sudo pip install roman
+- sudo pip install git+https://github.com/gitenberg-dev/pg-epubmaker
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+
+- /usr/bin/python -c "from gitenberg import travis; travis.build_epub()"
+- ebook-convert book.epub book.mobi
+- xvfb-run ebook-convert book.epub book.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: DdAjXn21dyyQdA2GYD5C6jLkH5wokqxJaToYxfAovtwdxKFUrQoo2SGQDMunqb3ePUnodi0gXVlQpCXtCl/sr+OMfx2Jrp8MTFC6Nfdv+JB8RI3NJOO54Eb6upGQWTjNM49EOByQ6+r87UpFKanK5GnJTUGMamec0DxFbS2cyFf4+gHrAJVJwYn+ho9qBr71B2nQAAgHwEq8PtAMeuxbjfuf6EZkuXabZcdeaBzSQ1UTAslf4a6gkgQELaXrgOd32ZKxoG1PY4XY6+cDlBhpicKDEhPd6iN9cPFIcsfBxZr0r+N401cVFADJ8k0e+RfyLxJNu1I2hlf/lvetpu7vqtqEboRiSlP+7vL5ULQX7xorPPBBmt6zrSALJEiREQOTimg0iSl4Yw0X2W3bFoxgIjhPXoIuBO5yDk0kBnB9zAkIRe9Rrhaov0UxBeRrdleZMOqKVXn/qRqwhkOUvNxookVUFMOpvGpvWDNjaWxOl07WnmWssaWo+QCBI8eqszuqt++aiCPPxw5HuIALwBR0xaBv4zwWx+tBwLpwGS1ql7ykILtioSJZWJgyjfHAv2OGSJ680s8ukVVGjyYx7M+ju2Nr97bl1FXPI4MQsoQjTZzSsOLyiYcxYsLqge8HDzBlZ7Z20rnjnd7SWNFqQM+p8UDjzLLZYZQ5x64WUGv5FxY=
+  file:
+    - book.epub
+    - book.mobi
+    - book.pdf
+  "on":
+    repo: GITenberg/The-Last-of-the-Mohicans--A-Narrative-of-1757_27681
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
+    - python-pip
+    - git
+    - python-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libfreetype6
+    - libfreetype6-dev
+    - zlib1g-dev
+    - python-lxml
+    - libxml2-dev
+    - libxslt1-dev
+    - tidy
