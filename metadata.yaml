@@ -1,5 +1,5 @@
 _repo: The-Last-of-the-Mohicans--A-Narrative-of-1757_27681
-_version: 0.1.0
+_version: 0.2.0
 contributor:
   illustrator:
     agent_name: Wyeth, N. C. (Newell Convers)
@@ -11,6 +11,9 @@ contributor:
     gutenberg_agent_id: '32841'
     url: http://www.gutenberg.org/2009/agents/32841
     wikipedia: http://en.wikipedia.org/wiki/N._C._Wyeth
+covers:
+- cover_type: archival
+  image_path: 27681-h/images/cover.jpg
 creator:
   author:
     agent_name: Cooper, James Fenimore
@@ -29,6 +32,8 @@ description: In 1757, the third year of the French and Indian War, Hawkeye, a co
   the evil Huron, Magua, who is determined to destroy them.  Find out what happens
   next. Beautifully illustrated, this classic comic graphic novel captures the imagination
   of readers of all ages and inspires a love of literature and reading.
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/27681#The-Last-of-the-Mohicans--A-Narrative-of-1757
 gutenberg_issued: '2009-01-01'
 gutenberg_type: Text
 identifiers:
